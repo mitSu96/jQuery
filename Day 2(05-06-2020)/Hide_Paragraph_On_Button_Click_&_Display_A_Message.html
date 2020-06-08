@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide Image & Display Message.</title>
+    <script src="../js/jquery-3.5.1.min.js"></script>
+
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    Google CDN Hosted jQuery Script We Can USe It For Websites But Due Sometimes Unhosted Webpages Like this git the google CDN does not Load correctly. -->
+
+    <style>
+        .img {
+            /*properties like url width size position of image  */
+            width: 50%;
+            background-image: url(../images/HQ.jpg);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>
+        5. Create a paragraph on button click it should hide once hidden it should display message done with hiding.
+    </h1><br>
+    <button id="dsp_text">Hide Below Paragraph & Display A Message.</button><br>
+
+    <h2>
+        <p>To start with, I'm a very interesting fellow, who's very hard to understand. A selfless attitude towards anyone whom I come across with. I'm of a very friendly nature and love to be with people who aren't selfish. I'm of a very competitive nature
+            but love to find good in everything I see. According to me, there are many things that make us depressed or upset, but that doesn't mean that we stop living. In fact, problems are a sign of life. They make us believe that we are living. The
+            only people who have no problems are in cemetry. So we shall be fortunate that we have problems. It enhances our minds. This is the philosophy of my life.
+        </p>
+    </h2>
+
+
+
+    <script>
+        $(document).ready(function() {
+            $("button").click(function() {
+                $("p").hide("slow", function() {
+                    if ($("#dsp_text").prop('value', 'Show'))
+                        $('#dsp_text').html('Hide');
+                    alert("The paragraph is now hidden");
+                });
+
+            });
+        });
+    </script>
+
+</body>
+
+</html>
