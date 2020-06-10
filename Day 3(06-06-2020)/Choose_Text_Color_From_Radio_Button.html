@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change COlor Of Text Using Radio Button.</title>
+    <script src="../js/jquery-3.5.1.min.js"></script>
+
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    Google CDN Hosted jQuery Script We Can USe It For Websites But Due Sometimes Unhosted Webpages Like this git the google CDN does not Load correctly. -->
+    <style>
+        input,
+        input::-webkit-input-placeholder {
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <h1>
+            5. Create radio buttons showing name of colors. Create a text area, when user type text in text area it should get the color as per radio button clicked .
+        </h1>
+        <input type="text" id="chng_clr" placeholder="Enter Data Here"><br><br>
+        <input type="radio" name="tColor" onclick="chng_Color(this.value)" value="Red">Red
+        <input type="radio" name="tColor" onclick="chng_Color(this.value)" value="Blue">Blue
+        <input type="radio" name="tColor" onclick="chng_Color(this.value)" value="DarkGreen">Dark-Green
+        <input type="radio" name="tColor" onclick="chng_Color(this.value)" value="Magenta">Magenta
+        <input type="radio" name="tColor" onclick="chng_Color(this.value)" value="Turquoise">Turquoise
+
+    </fieldset>
+
+    <script>
+        function chng_Color(colorName) {
+            $("#chng_clr").css("color", colorName);
+
+        }
+    </script>
+
+</body>
+
+</html>
