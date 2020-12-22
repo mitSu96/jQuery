@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Increase Image Size Slowly.</title>
+    <script src="../js/jquery-3.5.1.min.js"></script>
+
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    Google CDN Hosted jQuery Script We Can USe It For Websites But Due Sometimes Unhosted Webpages Like this git the google CDN does not Load correctly. -->
+
+    <style>
+        .img {
+            /*properties like url width size position of image  */
+            width: 50%;
+            background-image: url(../images/HQ.jpg);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>
+        4. Create image on page on button click size of image will slowly increase
+    </h3>
+    <button id="photograph">Resize The Image</button><br>
+
+    <div><img src="../images/HD.jpg" style="width:360px;height:240px;" /></div>
+
+
+
+    <script>
+        $(document).ready(function() {
+            $("#photograph").click(function() {
+                $("img").animate({
+
+                    height: '+=50px',
+                    width: '+=100px'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

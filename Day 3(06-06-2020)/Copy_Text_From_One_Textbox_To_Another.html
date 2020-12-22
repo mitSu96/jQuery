@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy From One Textbox To Another Via Button Click.</title>
+    <script src="../js/jquery-3.5.1.min.js"></script>
+
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    Google CDN Hosted jQuery Script We Can USe It For Websites But Due Sometimes Unhosted Webpages Like this git the google CDN does not Load correctly. -->
+
+</head>
+
+<body>
+    <fieldset>
+        <h1>
+            1. Create two text boxes and a buttons on click of button it should copy data from one text box to another
+        </h1>
+        <input type="text" id="inTxt1"><br><br>
+        <button onclick='
+        $("#inTxt2").val(function(){
+            return $("#inTxt1").val();
+        })
+        '>Copy Text Below</button><br><br>
+        <input type="text" id="inTxt2"><br><br>
+        <hr>
+        <h1>
+            Using Function(Click Outside To Copy Text To 2nd Box).
+        </h1>
+        <b>Value 1 </b>: <input id="txtFirst" type="textbox" />
+        <br/><br/>
+        <b>Value 2 </b>: <input id="txtSecond" type="textbox" />
+        <br/>
+
+    </fieldset>
+
+    <script>
+        $(document).ready(function() {
+            $('#txtFirst').blur(function() {
+                $('#txtSecond').val($('#txtFirst').val());
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>

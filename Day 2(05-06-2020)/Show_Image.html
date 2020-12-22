@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Hide Image On Button Click.</title>
+    <script src="../js/jquery-3.5.1.min.js"></script>
+
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    Google CDN Hosted jQuery Script We Can USe It For Websites But Due Sometimes Unhosted Webpages Like this git the google CDN does not Load correctly. -->
+    <style>
+        .image1 {
+            /*properties like url width size position of image 1 */
+            width: auto;
+            height: 1000px;
+            background-image: url(../images/HD.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin-bottom: 20px;
+        }
+        
+        .image2 {
+            /*properties like url width size position of image 1 */
+            width: 50%;
+            background-image: url(../images/HQ.jpg);
+        }
+    </style>
+
+</head>
+
+<body>
+    <h3>
+        1. Create a button, on click it should display image and if you click again it should hide image (Directly Using .Fade)
+    </h3>
+    <button id="btn1" onclick="$('#img1').fadeToggle()">HIDE/SHOW</button>
+    <!--Here #img1 is the id of the image to be displayed-->
+    <div class="image image1" id="img1"></div>
+    <!--here the class takes the prp,url of image 1 from style-->
+
+    </div>
+    <hr><br>
+    <h2>Hide Image (Using Script)</h2>
+    <p><img id="Himage" src="../images/HQ.jpg" alt="If you click on the Hide button, I will disappear." width="600" height="600"></p>
+    <!--here we have called the iamge 2 without applying prp from style tag.-->
+
+    <button id="hide">Hide Image</button>
+    <button id="unhide">Unhide Image</button>
+
+
+    <script>
+        $(document).ready(function() {
+            $("#hide").click(function() { //here #hide displays the image on button click as it hides the p tag elements.
+                $("p").hide();
+            });
+
+            $("#unhide").click(function() { //here #unhide displays the image on button click as it unhides the p tag elements.
+                $("p").show();
+            });
+        });
+    </script>
+
+</body>
+
+</html>
